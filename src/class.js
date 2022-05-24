@@ -3,6 +3,10 @@
  * @example
  * const newProgrammer = new Programmer ({fullname: 'Anna Black', 'Php'})
  * newProgrammer.getInfo()
+ * 
+ * @todo Implements other methods
+ * 
+ * @tutorial firstTutorial
  */
 
 class Programmer {

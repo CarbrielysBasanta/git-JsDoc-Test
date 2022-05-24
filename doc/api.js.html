@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>arrays.js - Documentation</title>
+    <title>api.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">arrays.js</h1>
+    <h1 class="page-title">api.js</h1>
     
 
     
@@ -39,31 +39,47 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * Arry of user's age
- * @type {Array}
- */
-const age = [19,42,25,36, {}]
+            <pre class="prettyprint source linenums"><code>const express = require('express')
+const app = express();
 
 /**
- * Array of user's scores 
- * @type {Array&lt;Number>}
+ * @module api
  */
-
-const scores = [10, 15.2, 299.51, 451]
 
 /**
- * Array of Number and Strings
- * @type {Array&lt;Number | String | Object>}
+ * Index Route
+ * 
+ * @name Index
+ * @path {GET} / 
+ * 
  */
-const scoresAndStrings = ["gff", 12, "ssss", 58, {"xxxx": 4545}]
-
+app.get('/', (req, res) => res.send('Welcome'))
 
 /**
- * User's name
- * @type {Array&lt;String>}
+ * Index Route
+ * @name Users
+ * @path {POST} /users
+ * 
  */
-const names = ["ryan", "jose"]</code></pre>
+app.post('/users', (req, res) => res.send('Welcome'))
+
+/**
+ * Index Route
+ * 
+ * @name Products
+ * @path {DELETE} /products
+ * 
+ */
+app.delete('/products', (req, res) => res.send('Welcome'))
+
+/**
+ * Index Route
+ * 
+ * @name Changes
+ * @path {PUT} /changes
+ * 
+ */
+app.put('/changes', (req, res) => res.send('Welcome'))</code></pre>
         </article>
     </section>
 
