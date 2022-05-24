@@ -28,5 +28,5 @@ const myNewUser2 = {
     fullname: 'Lena',
     age: 30,
     isActive: true,
-    password: 'Lena214'
+    password: 'Len1254'
 }
