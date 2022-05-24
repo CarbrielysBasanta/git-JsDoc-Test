@@ -28,6 +28,7 @@
   "devDependencies": {
     "gh-pages": "^4.0.0",
     "jsdoc-http-plugin": "^0.3.2",
-    "minami": "^1.2.3"
+    "minami": "^1.2.3",
+    "tui-jsdoc-template": "^1.2.2"
   }
 }
