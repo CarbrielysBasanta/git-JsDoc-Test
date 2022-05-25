@@ -7,9 +7,10 @@
   
   <style>
     body {
-        background: #373B44;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to left, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to left, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #642B73;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
     
     .my-card{
@@ -188,7 +189,7 @@
       ],
 
       slide: 'style',
-      lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
+      lorem: 'Who are you to call me a monster? all i wanted is what everyone else wants. ... love, a home, respect, kindness and basic human decency. that is all i want, that is all we all wanted, and if you cant give me that then leave us alone or i will show this entire world the animal inside me. ... take another step closer and i will show you who is the "prey" and why your kind calls me a "hunter"'
 
             
 
@@ -197,6 +198,7 @@
 
         methods: {
           onSubmit () {
+              
             console.log(this.image.name)
             axios.post('/crypto/add', {
               cryptoName: this.name,
