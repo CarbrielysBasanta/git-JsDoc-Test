@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /**
  * A new User object
  * @typedef {Object} User
@@ -32,4 +30,3 @@ const myNewUser2 = {
     isActive: true,
     password: 'Len1254'
 }
->>>>>>> jsdoc

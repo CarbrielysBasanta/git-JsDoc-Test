@@ -1,9 +1,13 @@
 const express = require('express')
 const app = express();
+const path = require('path');
 
 /**
  * @module api
  */
+
+
+app.set('port', process.env.PORT || 3000);
 
 /**
  * Index Route
@@ -12,7 +16,7 @@ const app = express();
  * @path {GET} / 
  * 
  */
-app.get('/', (req, res) => res.send('Welcome'))
+app.get('/', (req, res) => {res.sendFile(path.resolve(__dirname, 'helloworld.html'));})
 
 /**
  * Index Route
@@ -39,3 +43,7 @@ app.delete('/products', (req, res) => res.send('Welcome'))
  * 
  */
 app.put('/changes', (req, res) => res.send('Welcome'))
+
+app.listen(app.get('port'), () => {
+    console.log('Server listen on port', app.get('port'))
+})
