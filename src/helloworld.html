@@ -130,19 +130,19 @@ background: linear-gradient(to left, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/
                       <q-carousel-slide name="tv" class="column no-wrap flex-center">
                         <q-icon name="live_tv" size="56px"></q-icon>
                         <div class="q-mt-md text-center text-black">
-                          {{ lorem2 }}
+                          {{ lorem }}
                         </div>
                       </q-carousel-slide>
                       <q-carousel-slide name="layers" class="column no-wrap flex-center">
                         <q-icon name="layers" size="56px"></q-icon>
                         <div class="q-mt-md text-center text-black">
-                          {{ lorem3 }}
+                          {{ lorem }}
                         </div>
                       </q-carousel-slide>
                       <q-carousel-slide name="map" class="column no-wrap flex-center">
                         <q-icon name="terrain" size="56px"></q-icon>
                         <div class="q-mt-md text-center text-black">
-                          {{ lorem4 }}
+                          {{ lorem }}
                         </div>
                       </q-carousel-slide>
                     </q-carousel>
@@ -190,10 +190,7 @@ background: linear-gradient(to left, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/
       ],
 
       slide: 'style',
-      lorem: 'I could run. <br> I could cry, I could plead.',
-      lorem2: 'I could say its never gonna get any better, then leave',
-      lorem3: 'I could throw my hands up. <br> I could fall to my knees',
-      lorem4: 'I could tell myself Im strong enough. <br> To give all the love that I need'
+      lorem: 'Who are you to call me a monster? all i wanted is what everyone else wants. ... love, a home, respect, kindness and basic human decency. that is all i want, that is all we all wanted, and if you cant give me that then leave us alone or i will show this entire world the animal inside me. ... take another step closer and i will show you who is the "prey" and why your kind calls me a "hunter"'
 
             
 
@@ -202,6 +199,7 @@ background: linear-gradient(to left, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/
 
         methods: {
           onSubmit () {
+              
             console.log(this.image.name)
             axios.post('/crypto/add', {
               cryptoName: this.name,
