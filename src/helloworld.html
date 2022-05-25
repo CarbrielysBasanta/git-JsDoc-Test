@@ -7,9 +7,10 @@
   
   <style>
     body {
-      background: #000428;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to left, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to left, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */}
+        background: #373B44;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
     
     .my-card{
       width: 100%;
@@ -97,56 +98,53 @@
                   <div class="text-h6">Sapphire</div>
                 </q-card-section>
               
-                <!-- <div class="q-gutter-md" style="max-width: 300px">
-                  <q-form
-                    @submit="onSubmit"
-                    @reset="onReset"
-                    class="q-gutter-md"
-                  >
-                  <q-input filled v-model="text" label="Filled"></q-input>
+                <div class="q-pa-md">
+                    <q-option-group
+                      v-model="controlType"
+                      :options="controlTypeOptions"
+                      color="purple"
+                      inline
+                      class="q-mb-md"
+                    ></q-option-group>
                 
-                  <q-btn label="Submit" type="submit" color="primary"></q-btn>
-                </q-form>
-                </div> -->
-  
-                
-                 <q-markup-table>
-                  <template>
-                    <thead>
-                      <tr>
-                        <th class="text-right">Token</th>
-                        <th class="text-right">Symbol</th>
-                        <th class="text-right">Price</th>
-                      </tr>
-                    </thead>
-                  </template>
-                  <template>
-
-                    <tbody>
-                      <tr v-for="crypto in data">
-                        <td class="text-right" >{{crypto.cryptoName}}</td>
-                        <td class="text-right" >{{crypto.cryptoSymbol}}</td>
-                        <td class="text-right" >{{crypto.cryptoPrice}}</td>
-                        <td class="text-right" ><q-btn outline rounded color="primary"/><i class="fa-solid fa-pen"></i></td>
-                        <td class="text-right" ><q-btn outline rounded color="primary"><i class="fa-solid fa-trash-can"></i></td>
-                        
-
-                      </tr>
-                      
-                    </tbody>
-                  </template>
-                </q-markup-table>  
-                 <!--<div class="q-pa-md" style="max-width: 350px">
-                  <q-list bordered>
-              
-                     <q-item clickable v-ripple v-for="item in data">
-                      <q-item-section avatar>
-                         <q-avatar rounded>
-                          <img src="https://cdn.quasar.dev/img/mountains.jpg">
-                        </q-avatar> 
-                      </q-item-section>
-                      <q-item-section >{{item.cryptoName}}</q-item-section>
-                    </q-item>-->
+                    <q-carousel
+                      v-model="slide"
+                      swipeable
+                      animated
+                      :control-type="controlType"
+                      control-color="purple"
+                      navigation
+                      padding
+                      arrows
+                      height="300px"
+                      class="text-purple rounded-borders"
+                    >
+                      <q-carousel-slide name="style" class="column no-wrap flex-center">
+                        <q-icon name="style" size="56px"></q-icon>
+                        <div class="q-mt-md text-center text-black">
+                          {{ lorem }}
+                        </div>
+                      </q-carousel-slide>
+                      <q-carousel-slide name="tv" class="column no-wrap flex-center">
+                        <q-icon name="live_tv" size="56px"></q-icon>
+                        <div class="q-mt-md text-center text-black">
+                          {{ lorem }}
+                        </div>
+                      </q-carousel-slide>
+                      <q-carousel-slide name="layers" class="column no-wrap flex-center">
+                        <q-icon name="layers" size="56px"></q-icon>
+                        <div class="q-mt-md text-center text-black">
+                          {{ lorem }}
+                        </div>
+                      </q-carousel-slide>
+                      <q-carousel-slide name="map" class="column no-wrap flex-center">
+                        <q-icon name="terrain" size="56px"></q-icon>
+                        <div class="q-mt-md text-center text-black">
+                          {{ lorem }}
+                        </div>
+                      </q-carousel-slide>
+                    </q-carousel>
+                  </div>
               
                 </div> 
                 
@@ -183,7 +181,14 @@
             symbol: '',
             price: '',
             image: '',
-            text: ''
+            text: '',
+            controlType: 'flat',
+      controlTypeOptions: [
+        { value: 'unelevated', label: 'unelevated' }
+      ],
+
+      slide: 'style',
+      lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
 
             
 
