@@ -7,9 +7,11 @@
   
   <style>
     body {
-        background: #373B44;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to left, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to left, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
     
     .my-card{
@@ -112,12 +114,12 @@
                       swipeable
                       animated
                       :control-type="controlType"
-                      control-color="purple"
+                      control-color="blue"
                       navigation
                       padding
                       arrows
                       height="300px"
-                      class="text-purple rounded-borders"
+                      class="text-blue rounded-borders"
                     >
                       <q-carousel-slide name="style" class="column no-wrap flex-center">
                         <q-icon name="style" size="56px"></q-icon>
@@ -128,19 +130,19 @@
                       <q-carousel-slide name="tv" class="column no-wrap flex-center">
                         <q-icon name="live_tv" size="56px"></q-icon>
                         <div class="q-mt-md text-center text-black">
-                          {{ lorem }}
+                          {{ lorem2 }}
                         </div>
                       </q-carousel-slide>
                       <q-carousel-slide name="layers" class="column no-wrap flex-center">
                         <q-icon name="layers" size="56px"></q-icon>
                         <div class="q-mt-md text-center text-black">
-                          {{ lorem }}
+                          {{ lorem3 }}
                         </div>
                       </q-carousel-slide>
                       <q-carousel-slide name="map" class="column no-wrap flex-center">
                         <q-icon name="terrain" size="56px"></q-icon>
                         <div class="q-mt-md text-center text-black">
-                          {{ lorem }}
+                          {{ lorem4 }}
                         </div>
                       </q-carousel-slide>
                     </q-carousel>
@@ -182,13 +184,16 @@
             price: '',
             image: '',
             text: '',
-            controlType: 'flat',
+            controlType: 'unelevated',
       controlTypeOptions: [
-        { value: 'unelevated', label: 'unelevated' }
+        
       ],
 
       slide: 'style',
-      lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
+      lorem: 'I could run. <br> I could cry, I could plead.',
+      lorem2: 'I could say its never gonna get any better, then leave',
+      lorem3: 'I could throw my hands up. <br> I could fall to my knees',
+      lorem4: 'I could tell myself Im strong enough. <br> To give all the love that I need'
 
             
 
